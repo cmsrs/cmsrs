@@ -1,0 +1,11 @@
+            <div ng-repeat="lang in langs">
+				<tt> {{lang}}++==++ </tt>
+                <div class="form-group">
+                    <label>name  {{lang}}</label>
+                    <input name="name" class="form-control"
+                           ng-model="menu.translates.menu_short_title[lang]" required />
+
+                    <input name="name" class="form-control"
+                           ng-model="datalang" required />
+                </div>
+            </div>

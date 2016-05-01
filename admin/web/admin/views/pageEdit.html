@@ -1,0 +1,105 @@
+<style>
+    .ng-invalid { background-color: lightpink; }
+    .ng-valid { background-color: lightgreen; }
+    span.error { color: red; font-weight: bold; }
+</style>
+
+
+<h2>Edit page</h2>
+
+<div class="panel panel-default row" ng-controller="pageEditCtrl">
+
+	<form name="pageForm" novalidate>
+		<div class="well">
+
+			<h3>Title</h3>
+
+			<div ng-repeat="lang in langs">
+				<div class="form-group">
+					<label>short name  {{lang}}</label>
+					<input name="name" class="form-control"
+						   ng-model="page.translates.page_short_title[lang]" required />
+				</div>
+			</div>
+
+
+			<div ng-repeat="lang in langs">
+				<div class="form-group">
+					<label>name  {{lang}}</label>
+					<input name="name" class="form-control"
+						   ng-model="page.translates.page_title[lang]" required />
+				</div>
+			</div>
+
+
+            <!-- <span class="error" ng-show="menuForm.name.$error.required">Proszę podać imię i nazwisko.</span> -->
+            <div>
+                <label>
+                    <input name="published" type="checkbox"
+                           ng-model="page.published"  ng-true-value="'1'" ng-false-value="'0'"  />
+                    published
+                </label>
+            </div>
+
+
+			<!-- <lang-items datalang="page.translates.page_short_title"></lang-items>  -->
+			<!-- <span class="error" ng-show="pageForm.name.$error.required">Proszę podać imię i nazwisko.</span> -->
+
+			<h3>Menu</h3>
+
+            <div>
+				<label for="position">
+				<select name="position" id="position" ng-model="page.menus_id" require >
+					<option ng-repeat="option in menuToSelect" value="{{option.id}}">{{option.menu_short_title}}</option>
+				</select>
+				menu	
+				</label>
+            </div>
+
+			<div>
+				<label>
+					<input name="is_left_menu" type="checkbox"
+						   ng-model="page.is_left_menu"  ng-true-value="'1'" ng-false-value="'0'"  />
+					is left menu?
+				</label>
+			</div>
+
+			<h3>Intro text</h3>
+
+			<div>
+				<label>
+					<input name="is_intro_text" type="checkbox"
+						   ng-model="page.is_intro_text"  ng-true-value="'1'" ng-false-value="'0'"  />
+					is intro text?	
+				</label>
+			</div>
+
+			<div ng-repeat="lang in langs">
+				<div class="form-group">
+					<label>intro text {{lang}}</label>
+					<input name="name" class="form-control"
+						   ng-model="page.translates.page_intro_text[lang]" required />
+				</div>
+			</div>
+
+			<h3>Content</h3>
+
+			<div ng-repeat="lang in langs">
+				<div class="form-group">
+					<label>content {{lang}}</label>
+					<textarea name="name" class="form-control"
+						   ng-model="page.contents[lang]" required /></textarea>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<button ng-disabled="pageForm.$invalid"
+						ng-click="savePage(page)"
+						class="btn btn-primary">
+					{{btnName}}
+				</button>
+			</div>
+		</div>
+	</form>
+
+</div>

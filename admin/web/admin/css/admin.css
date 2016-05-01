@@ -1,0 +1,19 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.glyphicon {
+    /*font-size: 25px;*/
+    font-size: 1.8em;
+}
+.icon-success {
+    color: #5CB85C;
+}
+
+.icon-failure {
+	color: #d9534f;
+}

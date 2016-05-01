@@ -1,0 +1,40 @@
+<h2>Menus</h2>
+
+<!--
+<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+-->
+
+<div class="panel panel-default row" ng-controller="menuListCtrl">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Published</th>
+                    <th class="text-center">Position</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr ng-repeat="item in menusData">
+                    <td class="text-center">{{item.id}}</td>
+                    <td class="text-center">{{item.menu_short_title}}</td>
+                    <td class="text-center">{{item.published | checkmark }}</td>
+                    <td class="text-center">{{item.position}}</td>
+
+					<td><a ng-click="editMenu(item.id)" class="btn btn-small btn-primary">edit</a></td>
+					<td><a ng-click="deleteMenu(item.id)" class="btn btn-small btn-danger">delete</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <div class="text-center">
+            <a  ng-click="createMenu()"  class="btn btn-primary">add</a>
+        </div>
+
+
+
+</div>

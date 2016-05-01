@@ -1,0 +1,54 @@
+<style>
+    .ng-invalid { background-color: lightpink; }
+    .ng-valid { background-color: lightgreen; }
+    span.error { color: red; font-weight: bold; }
+</style>
+
+
+<h2>Edit menu</h2>
+
+<div class="panel panel-default row" ng-controller="menuEditCtrl">
+
+	<form name="menuForm" novalidate>
+		<div class="well">
+			<h3>Name</h3>
+			<div ng-repeat="lang in langs">
+				<div class="form-group">
+					<label>name  {{lang}}</label>
+					<input name="name" class="form-control"
+						   ng-model="menu.translates.menu_short_title[lang]" required />
+				</div>
+			</div>
+
+			<!-- <lang-items datalang="menu.translates.menu_short_title"></lang-items>  -->
+			<h3>Menu params</h3>
+
+			<!-- <span class="error" ng-show="menuForm.name.$error.required">Proszę podać imię i nazwisko.</span> -->
+			<div>
+				<label>
+					<input name="published" type="checkbox"
+						   ng-model="menu.published"  ng-true-value="'1'" ng-false-value="'0'"  />
+					published
+				</label>
+			</div>
+
+            <div>
+				<label for="position">
+				<select name="position" id="position" ng-model="menu.position" require >
+					<option ng-repeat="option in positions" value="{{option}}">{{option}}</option>
+				</select>
+				position
+				</label>
+            </div>
+
+			<div class="text-center">
+				<button ng-disabled="menuForm.$invalid"
+						ng-click="saveMenu(menu)"
+						class="btn btn-primary">
+					{{btnName}}
+				</button>
+			</div>
+		</div>
+	</form>
+
+</div>

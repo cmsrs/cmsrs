@@ -1,0 +1,830 @@
+2016-02-28 14:10:58 [127.0.0.1][-][-][info][debug] catalog info
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:39
+2016-02-28 14:10:58 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54560'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456668658.13
+    'REQUEST_TIME' => 1456668658
+]
+2016-02-28 14:11:25 [127.0.0.1][-][-][info][debug] catalog info
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:39
+2016-02-28 14:11:25 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54561'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456668685.621
+    'REQUEST_TIME' => 1456668685
+]
+2016-02-28 14:11:53 [127.0.0.1][-][-][info][debug] test13213
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:39
+2016-02-28 14:11:53 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54562'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456668713.694
+    'REQUEST_TIME' => 1456668713
+]
+2016-02-28 14:12:45 [127.0.0.1][-][-][info][debug] test13213
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:39
+2016-02-28 14:12:45 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54563'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456668765.86
+    'REQUEST_TIME' => 1456668765
+]
+2016-02-28 14:12:58 [127.0.0.1][-][-][info][debug] test13213
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:39
+2016-02-28 14:12:58 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54564'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456668778.881
+    'REQUEST_TIME' => 1456668778
+]
+2016-02-28 14:16:34 [127.0.0.1][-][-][info][debug] [
+    'published' => '1',
+    'position' => '1',
+    'is_link' => '1',
+    'translates' => [
+        'menu_short_title' => [
+            'pl' => 'test_pl2',
+            'en' => 'test_en2',
+        ],
+    ],
+]
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:16:34 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54566'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456668994.801
+    'REQUEST_TIME' => 1456668994
+]
+2016-02-28 14:23:52 [127.0.0.1][-][-][info][debug] []
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:23:52 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '106'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54569'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456669432.547
+    'REQUEST_TIME' => 1456669432
+]
+2016-02-28 14:24:39 [127.0.0.1][-][-][info][debug] []
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:24:39 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '104'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54578'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456669479.174
+    'REQUEST_TIME' => 1456669479
+]
+2016-02-28 14:28:29 [127.0.0.1][-][-][info][debug] []
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:28:29 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '87'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54582'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456669709.436
+    'REQUEST_TIME' => 1456669709
+]
+2016-02-28 14:29:05 [127.0.0.1][-][-][info][debug] [
+    'published' => '1',
+    'position' => '1',
+    'is_link' => '1',
+    'translates' => [
+        'menu_short_title' => [
+            'pl' => 'test_pl2',
+            'en' => 'test_en2',
+        ],
+    ],
+]
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:29:05 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54583'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456669745.947
+    'REQUEST_TIME' => 1456669745
+]
+2016-02-28 14:30:02 [127.0.0.1][-][-][info][debug] []
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:30:02 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '111'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54584'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456669802.502
+    'REQUEST_TIME' => 1456669802
+]
+2016-02-28 14:34:15 [127.0.0.1][-][-][info][debug] []
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:34:15 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '78'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54585'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456670055.909
+    'REQUEST_TIME' => 1456670055
+]
+2016-02-28 14:34:34 [127.0.0.1][-][-][info][debug] []
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:34:34 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '58'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54592'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456670074.712
+    'REQUEST_TIME' => 1456670074
+]
+2016-02-28 14:40:50 [127.0.0.1][-][-][info][debug] []
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:40:50 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '108'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54596'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456670450.862
+    'REQUEST_TIME' => 1456670450
+]
+2016-02-28 14:41:12 [127.0.0.1][-][-][info][debug] []
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:41:12 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '109'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54597'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456670472.013
+    'REQUEST_TIME' => 1456670472
+]
+2016-02-28 14:41:35 [127.0.0.1][-][-][info][debug] [
+    'published' => '1',
+    'position' => '1',
+    'is_link' => '1',
+    'translates' => [
+        'menu_short_title' => [
+            'pl' => 'test_pl2',
+            'en' => 'test_en2',
+        ],
+    ],
+]
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:41:35 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54598'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456670495.483
+    'REQUEST_TIME' => 1456670495
+]
+2016-02-28 14:42:07 [127.0.0.1][-][-][info][debug] null
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:42:07 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54599'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456670527.973
+    'REQUEST_TIME' => 1456670527
+]
+2016-02-28 14:42:22 [127.0.0.1][-][-][info][debug] null
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:42:22 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54600'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456670542.828
+    'REQUEST_TIME' => 1456670542
+]
+2016-02-28 14:42:54 [127.0.0.1][-][-][info][debug] null
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:35
+2016-02-28 14:42:54 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://cmsrs2adm.loc/'
+    'CONTENT_LENGTH' => '107'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://cmsrs2adm.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54605'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456670574
+    'REQUEST_TIME' => 1456670574
+]
+2016-02-28 14:51:16 [127.0.0.1][-][-][info][debug] [
+    'published' => '1',
+    'position' => '1',
+    'is_link' => '1',
+    'translates' => [
+        'menu_short_title' => [
+            'pl' => 'test_pl2',
+            'en' => 'test_en2',
+        ],
+    ],
+]
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:36
+2016-02-28 14:51:16 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54607'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456671076.567
+    'REQUEST_TIME' => 1456671076
+]
+2016-02-28 14:51:25 [127.0.0.1][-][-][info][debug] [
+    'published' => '1',
+    'position' => '1',
+    'is_link' => '1',
+    'translates' => [
+        'menu_short_title' => [
+            'pl' => 'test_pl2',
+            'en' => 'test_en2',
+        ],
+    ],
+]
+    in /data/www/cmsrs2/yii-application/api/controllers/MenusController.php:36
+2016-02-28 14:51:25 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'curl/7.35.0'
+    'HTTP_HOST' => 'cmsrs2adm.loc:8081'
+    'HTTP_ACCEPT' => 'application/json'
+    'CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '114'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at cmsrs2adm.loc Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'cmsrs2adm.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/www/cmsrs2/yii-application/api/web/'
+    'SERVER_ADMIN' => 'admin@cmsrs2.loc'
+    'SCRIPT_FILENAME' => '/data/www/cmsrs2/yii-application/api/web/index.php'
+    'REMOTE_PORT' => '54608'
+    'REDIRECT_URL' => '/menus/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/menus/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1456671085.167
+    'REQUEST_TIME' => 1456671085
+]

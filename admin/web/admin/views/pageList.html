@@ -1,0 +1,35 @@
+<h2>Pages</h2>
+
+<div class="panel panel-default row" ng-controller="pageListCtrl">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Published</th>
+                    <th class="text-center">Menus_id</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr ng-repeat="item in pagesData">
+                    <td class="text-center">{{item.id}}</td>
+                    <td class="text-center">{{item.page_short_title}}</td>
+                    <td class="text-center">{{item.published | checkmark }}</td>
+                    <td class="text-center">{{item.menus_id}}</td>
+
+					<td><a ng-click="editPage(item.id)" class="btn btn-small btn-primary">edit</a></td>
+					<td><a ng-click="deletePage(item.id)" class="btn btn-small btn-danger">delete</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <div class="text-center">
+            <a  ng-click="createPage()"  class="btn btn-primary">add</a>
+        </div>
+
+
+
+</div>
