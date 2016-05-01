@@ -1,0 +1,58 @@
+stare:
+'page','menu','image','link','type_key','toolbar','admin','config'
+
+
+nowe:
+'menu_short_title','page_short_title','page_title','page_intro_text','image_desc'
+
+
+
+Edycja menu:
+
+- Krótka nazwa menu (translates.type: menu_short_title ) - czy to tez moze byc link?  
+- Pozycja
+- is_link
+
+Lista stron:
+
+- id
+- nazwa krotka
+- publikacja
+- menu
+(kasowanie tylko dla is_deleted == 1)
+(sortowanie do poprawy - w.g. pozycji menu a pozniej wg. alfabetu)
+
+
+Edycja strony:
+
+- Menu (menu_id -> nazwa menu) - tylko aktywnych menu
+- left_menu
+
+- Krótka nazwa tytułu (translates.type: page_short_title ) 
+- Tytuł strony (translates.type: page_title)
+
+- is_intro_text  czy jest intro textu (brak opcji - 0 oznacza brak introtextu)
+- Opis intro-text (translates.type: page_intro_text)
+
+
+- Kontent ( contents.content ) - zmienne: thumb, link
+
+- Upload zdjęć
+- Opis zdjęcia (translates.type: image_desc)
+
+
+
+-------------------------
+
+
+menu_id, 
+left_menu, 
+
+translates.type: page_short_title, 
+translates.type: page_title, 
+
+is_intro_text 
+translates.type: page_intro_text, 
+
+contents.content
+
