@@ -38,6 +38,10 @@ class Pages extends  Base //ActiveRecord
 		return $this->hasMany( Contents::className(), [ 'pages_id' => 'id' ] );
 	}
 
+	public function getImages(){
+		return $this->hasMany( Images::className(), [ 'pages_id' => 'id' ] );
+	}
+
     public function getMenus(){
 		return $this->hasOne( Menus::className(), ['id' => 'menus_id']);
 	}
@@ -191,7 +195,7 @@ class Pages extends  Base //ActiveRecord
 	* to cache - todo
 	*/
     public static function GetPagesWithRelations( $pageId = null  ){
-        $arrPages =  Pages::find()->asArray()->with( 'translates', 'contents' )->all();
+        $arrPages =  Pages::find()->asArray()->with( 'translates', 'contents', 'images' )->all();
 		//$arrPagesIndex =   ArrayHelper::index( $arrPages, 'id');
 
 		$out = [];

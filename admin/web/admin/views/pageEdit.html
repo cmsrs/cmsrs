@@ -48,13 +48,14 @@
 			<h3>Menu</h3>
 
             <div>
-				<label for="position">
-				<select name="position" id="position" ng-model="page.menus_id" require >
+				<label for="menus_id">
+				<select name="menus_id" id="menus_id" ng-model="page.menus_id" required>
 					<option ng-repeat="option in menuToSelect" value="{{option.id}}">{{option.menu_short_title}}</option>
 				</select>
 				menu	
 				</label>
             </div>
+<!--			<span   class="error"  ng-show="pageForm.menus_id.$error.required">Select menu</span>-->
 
 			<div>
 				<label>
@@ -91,6 +92,11 @@
 						   ng-model="page.contents[lang]" required /></textarea>
 				</div>
 			</div>
+
+
+			<h3>Image</h3>
+			<input  ng-hide="!page.id"  data-upload-file type="file" name="file" id="page_id_{{page.id}}" >
+
 
 			<div class="text-center">
 				<button ng-disabled="pageForm.$invalid"

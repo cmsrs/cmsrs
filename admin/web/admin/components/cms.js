@@ -24,6 +24,43 @@ angular.module("cms", [])
 	}
 
 })
+.directive('uploadFile', function (httpPostFactory) {
+    return {
+        restrict: 'A',
+        scope: true,
+        link: function (scope, element, attr) {
+
+            element.bind('change', function () {
+                var formData = new FormData();
+                formData.append('file', element[0].files[0]  );
+				var pageId = element[0].id.replace(/[^\d]/g,'');
+                formData.append('pages_id', pageId );
+
+                httpPostFactory('http://cmsrs2admin.loc/api/images/upload', formData, function (callback) {
+                   // recieve image name to use in a ng-src 
+                    console.log(callback);
+                });
+            });
+
+        }
+    };
+})
+.factory('httpPostFactory', function ($http) {
+    return function (file, data, callback) {
+
+        $http({
+            url: file,
+            method: "POST",
+            data:  data,
+            headers: {'Content-Type': undefined}
+        }).success(function (response) {
+            callback(response);
+        });
+    };
+})
+;
+
+/*
 .directive("langItems", function() {
     return {
         restrict: "AE",
@@ -43,6 +80,7 @@ angular.module("cms", [])
     };
 })
 ;
+*/
 
 
 

@@ -26,6 +26,7 @@ return [
 				//'/' =>  'cms/index',
 				'<lang:\w+>' => 'cms/index',
 				'<lang:\w+>/page/<page_id:\d+>' => 'cms/page',
+				'/image/<image_id:\d+>' => 'cms/image',
             ],
         ],
 

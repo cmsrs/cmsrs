@@ -60,6 +60,10 @@ class Menus extends  Base //ActiveRecord
 		if( empty($objMenu) ){
 			return false;
 		}
+		foreach( $objMenu->pages as $page  ){
+			Images::DeleteImagesPageByPageId( $page->id );
+		}
+
 		return $objMenu->delete();
 		//return true;
 	}

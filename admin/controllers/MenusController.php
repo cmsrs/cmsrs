@@ -4,6 +4,7 @@ namespace admin\controllers;
 use Yii;
 //use yii\rest\Controller;
 use common\models\Menus;
+use common\models\Images;
 use common\models\Translates;
 
 class MenusController extends BaseController{
@@ -30,6 +31,8 @@ class MenusController extends BaseController{
 	* potrzebne do testow
 	*/
 	public function actionDeleteall(){ 
+		Images::DeleteAllImgFiles();
+
 		Menus::deleteAll();
 	}
 

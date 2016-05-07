@@ -4,6 +4,7 @@ namespace admin\controllers;
 use Yii;
 //use yii\rest\Controller;
 use common\models\Pages;
+use common\models\Images;
 use common\models\Translates;
 use common\models\Contents;
 
@@ -35,6 +36,7 @@ class PagesController extends BaseController{
 
 	public function actionDelete( $id =null ){
 
+		Images::DeleteImagesPageByPageId( $id );
 		$isDel = Pages::deletePageById( $id  );
 		return  $isDel;
 	}

@@ -55,6 +55,7 @@ angular.module("adminCmsrs")
 
 
         $scope.savePage= function (pageData) {
+			//console.log( pageData  );
 
 			var page =  'data=' + JSON.stringify( pageData );
 

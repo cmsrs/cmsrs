@@ -13,6 +13,7 @@ use yii\web\Controller;
 use yii\base\ErrorException;
 use common\models\Pages;
 use common\models\Menus;
+use common\models\Images;
 //use yii\filters\VerbFilter;
 //use yii\filters\AccessControl;
 
@@ -90,6 +91,23 @@ class CmsController extends Controller
 
 
         return $this->render( 'page', [ 'page' => $arrPage, 'menu' => $arrMenu, 'leftMenu' => $leftMenu[0] ] );
+	}
+
+	public function actionImage(){
+		
+		$urlParams =  Yii::$app->request->get();
+
+		if( empty( $urlParams['image_id'] )   ){
+			throw new ErrorException('0x2343299 empty lang or image_id');
+		}
+		Images::displayImgById(  $urlParams['image_id']  );
+
+		//$arrImg  = Images::GetImagesWithRelations( $urlParams['image_id']  );
+		//$pathImg =  Images::GetPathToImageByPageId( $arrImg['pages_id'], $arrImg['name'], $arrImg['id'],  false  );
+		//header('Content-Type: image/jpeg');
+		//header('Content-Length: ' . filesize(  $pathImg  ));
+		//readfile( $pathImg );
+
 	}
 
 }
