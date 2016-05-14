@@ -12,6 +12,7 @@ This is cutdown version of my cms.
 It is include:
 * add pages and menu
 * add content to the page
+* upload and delete image
 * set up langs
 
 Db scheme:
@@ -118,6 +119,8 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 	example:
 	https://github.com/cmsrs/cmsrs/blob/master/temp/cmsrs_admin.png
 
+	https://github.com/cmsrs/cmsrs/blob/master/temp/admin_page_edit.png
+
 
 
 6. Frontend:
@@ -126,6 +129,10 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 
 	example:
 	https://github.com/cmsrs/cmsrs/blob/master/temp/cmsrs_frontend.png
+
+	https://github.com/cmsrs/cmsrs/blob/master/temp/front_start_page.png
+
+	https://github.com/cmsrs/cmsrs/blob/master/temp/front_page_example.png
 
 
 
