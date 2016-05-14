@@ -118,6 +118,8 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 
 	example:
 
+	https://github.com/cmsrs/cmsrs/blob/master/temp/admin_list_page.png
+
 	https://github.com/cmsrs/cmsrs/blob/master/temp/cmsrs_admin.png
 
 	https://github.com/cmsrs/cmsrs/blob/master/temp/admin_page_edit.png
