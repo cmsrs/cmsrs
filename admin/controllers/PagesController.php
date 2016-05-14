@@ -26,6 +26,13 @@ class PagesController extends BaseController{
 		return $out;
 	}
 
+	/**
+	* $id - image id
+	*/
+	public function actionShowimage( $id = null ){
+		Images::displayImgById( $id  );
+	}
+
 
 	/**
 	* potrzebne do testow

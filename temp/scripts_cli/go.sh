@@ -97,6 +97,9 @@ echo -e "./image/upload.sh $id_p2"
 id_i=$(./image/upload.sh $id_p2)
 
 
+echo -e "./image/upload.sh $id_p2"
+id_i99=$(./image/upload.sh $id_p2)
+
 echo -e "--getconfig--"
 ./main/getconfig.sh
 
@@ -131,8 +134,11 @@ echo -e "./image/upload.sh $id_p4"
 id_i8=$(./image/upload.sh $id_p4)
 
 
+#echo -e "./image/showimage.sh $id_i8"
+#./image/showimage.sh $id_i8
 
 echo -e "ls -laR $imgDir"
 ls -laR $imgDir 
+
 
 

@@ -93,8 +93,17 @@
 				</div>
 			</div>
 
+<!--			<h3>kkkkkkk {{ page.rstest }} </h3> -->
 
 			<h3>Image</h3>
+
+			
+			<div ng-repeat="(key, value) in page.images">
+				<img style="margin: 10px" class="img-thumbnail" ng-src="/api/pages/showimage/{{value}}">
+				<a href="" id="image_id_{{value}}" data-delete-file>delete image</a>
+			</div>
+
+
 			<input  ng-hide="!page.id"  data-upload-file type="file" name="file" id="page_id_{{page.id}}" >
 
 

@@ -24,7 +24,7 @@ angular.module("cms", [])
 	}
 
 })
-.directive('uploadFile', function (httpPostFactory) {
+.directive('uploadFile', function (httpUploadFactory) {
     return {
         restrict: 'A',
         scope: true,
@@ -36,16 +36,26 @@ angular.module("cms", [])
 				var pageId = element[0].id.replace(/[^\d]/g,'');
                 formData.append('pages_id', pageId );
 
-                httpPostFactory('http://cmsrs2admin.loc/api/images/upload', formData, function (callback) {
+                httpUploadFactory('http://cmsrs2admin.loc/api/images/upload', formData, function (callback) {
                    // recieve image name to use in a ng-src 
-                    console.log(callback);
+
+					window.location.reload();
+                    //console.log('image_id='+callback);
+					//var oldImgs =  scope.page.images;
+					//var newImgs =   oldImgs.push( callback );
+					//console.log( oldImgs  );
+					//console.log( newImgs );
+					//scope.$apply();
+
                 });
+
+
             });
 
         }
     };
 })
-.factory('httpPostFactory', function ($http) {
+.factory('httpUploadFactory', function ($http) {
     return function (file, data, callback) {
 
         $http({
@@ -58,6 +68,50 @@ angular.module("cms", [])
         });
     };
 })
+.factory('httpDeleteFactory', function ($http) {
+    return function (file, data, callback) {
+
+        $http({
+            url: file,
+            method: "DELETE",
+            data:  data,
+            headers: {'Content-Type': undefined}
+        }).success(function (response) {
+            callback(response);
+        });
+    };
+})
+.directive('deleteFile', function ( $resource, httpDeleteFactory) {
+    return {
+        restrict: 'A',
+        scope: true,
+        link: function (scope, element, attr) {
+
+            element.bind('click', function () {
+				var imageId = element[0].id.replace(/[^\d]/g,'');
+
+				//curl  -H "Accept:application/json"  -XDELETE    "http://cmsrs2admin.loc/api/images/delete/$1"
+                //httpDeleteFactory('http://cmsrs2admin.loc/api/images/upload', imageId, function (callback) {
+				//	window.location.reload();
+                //});
+				imgResource = $resource( "http://cmsrs2admin.loc/api/images/delete/" + ":id", { id: "@id" });
+				imgResource.remove({ id: imageId }, function(){
+					//cms.setItems(  $scope.pagesData  );
+					//$scope.pagesData = cms.removeItem( pageId  );
+
+					window.location.reload();
+				});
+
+
+            });
+
+        }
+    };
+})
+
+
+
+
 ;
 
 /*

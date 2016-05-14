@@ -149,7 +149,9 @@ class Pages extends  Base //ActiveRecord
 
 	public static  function  getDataById( $id  ){
 		//$table =  'Menus';
-		$arrPage = Pages::find()->asArray()->where(['id' => $id])->with( 'translates', 'contents' )->one();
+		$arrPage = Pages::find()->asArray()->where(['id' => $id])->with( 'translates', 'contents', 'images' )->one();
+
+
 
 		$out = [];
 		if( empty($arrPage)  ){
@@ -163,6 +165,16 @@ class Pages extends  Base //ActiveRecord
 
 		$out = Base::transformDataFromDbToHtml( $arrPage );
 
+		if( !empty( $out['images'] ) ){
+			$arrImgs = $out['images'];
+			unset($out['images']);
+			foreach(  $arrImgs as $aImg   ){
+				$out['images'][] = $aImg['id'];
+			}
+
+		}
+
+		//echo "<pre>"; print_r( $out  ); echo "</pre>"; die('=====');
 /*
 		foreach(  $arrPage  as  $key => $item ){
 			if(  'translates' == $key   ){
