@@ -4,6 +4,8 @@ angular.module("adminCmsrs")
     .controller("menuListCtrl", function ($scope, $resource,  $http, $location
 	, menusUrl, menuDelete, cms  ){
 
+		this.navHide = false;
+
         $scope.menusData = {
         };
 

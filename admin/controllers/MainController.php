@@ -12,9 +12,8 @@ class MainController extends BaseController{
         $params =  Yii::$app->params;
         //var_dump( $params );
         //die( 'getConfig' );
-        return $params;
+        return $params['public'];
     }
-
     public function behaviors()
     {
         $behaviors = parent::behaviors();

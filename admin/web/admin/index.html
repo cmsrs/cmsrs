@@ -22,6 +22,11 @@
         angular.module("adminCmsrs", ["ngRoute", "ngResource", "customFilters", "cms"]  )
         .config(function ($routeProvider, $httpProvider  ) {
 
+			$routeProvider.when("/login", {
+				templateUrl: "views/login.html"
+			});
+
+
             $routeProvider.when("/pagelist", {
                 templateUrl: "views/pageList.html"
             });
@@ -34,27 +39,20 @@
             $routeProvider.when("/menuedit/:id", {
                 templateUrl: "views/menuEdit.html"
             });
-            $routeProvider.otherwise({
+
+
+            $routeProvider.when("/menulist", {
                 templateUrl: "views/menuList.html"
             });
 
-			//console.log( $httpProvider  );
-			//$httpProvider.defaults.headers.common = {};
+            $routeProvider.otherwise({
+				redirectTo: "/login"
+            });
 
 			$httpProvider.defaults.headers.post = {};
 			$httpProvider.defaults.headers.put = {};
 			$httpProvider.defaults.headers.patch = {};
 			$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
-
-			//$httpProvider.interceptors.push('httpResponseInterceptor');
-			//$httpProvider.interceptors.push('httpTimeStampMarker');
-			//$httpProvider.defaults.useXDomain = true;
-			//$httpProvider.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-			//$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-			//$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
-			//delete $httpProvider.defaults.headers.common['Content-Type, X-Requested-With'];
-
-			//$http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
 
         });
     </script>
@@ -62,6 +60,7 @@
 	<script src="controllers/menuEditControllers.js"></script> 
 	<script src="controllers/pageListControllers.js"></script>
 	<script src="controllers/pageEditControllers.js"></script> 
+	<script src="controllers/loginControllers.js"></script> 
 
 	<script src="components/cms.js"></script>
 	<script src="filters/customFilters.js"></script>
@@ -70,7 +69,10 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+<!-- ng-controller="loginCtrl -->
+<div ng-controller="authCtrl">
+    <nav  ng-hide="navHide"  class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -79,24 +81,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Admin Cmsrs</a>
+          <a class="navbar-brand" href="#menulist">Admin Cmsrs</a> 
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
 		<!-- <li  class="active" --> 
-            <li><a href="#">Menus</a></li>
+            <li><a href="#menulist">Menus</a></li>
             <li><a href="#pagelist">Pages</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
+
     <div class="container">
 		<ng-view />
     </div><!-- /.container -->
+
+</div>
+
     <div class="alert alert-danger" ng-show="data.error">
         Błąd 500.
-        <a href="/" class="alert-link">Kliknij tutaj, aby spróbować ponownie</a>
+        <a href="/admin" class="alert-link">Try again</a>
     </div>
 
 

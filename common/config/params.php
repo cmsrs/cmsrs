@@ -3,6 +3,10 @@ return [
     //'adminEmail' => 'admin@example.com',
     //'supportEmail' => 'support@example.com',
     //'user.passwordResetTokenExpire' => 3600,
-	'langs' => [ 'en', 'pl'  ], //the first value will be default lang
-
+	'public' => [
+		'langs' => [ 'en', 'pl'  ], //the first value will be default lang
+	],
+	'priv' => [
+		'auth' => ["username" => "demo",  "password" => "test123" ],
+	]
 ];

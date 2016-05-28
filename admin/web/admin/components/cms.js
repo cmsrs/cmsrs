@@ -37,15 +37,12 @@ angular.module("cms", [])
                 formData.append('pages_id', pageId );
 
                 httpUploadFactory('http://cmsrs2admin.loc/api/images/upload', formData, function (callback) {
-                   // recieve image name to use in a ng-src 
 
-					window.location.reload();
-                    //console.log('image_id='+callback);
-					//var oldImgs =  scope.page.images;
-					//var newImgs =   oldImgs.push( callback );
-					//console.log( oldImgs  );
-					//console.log( newImgs );
-					//scope.$apply();
+					scope.$watch('page.images', function(newValue, oldImgs){
+						var newImgId = callback.toString();
+						oldImgs.push( newImgId  );
+						scope.page.images =  oldImgs; 
+					});
 
                 });
 
@@ -90,16 +87,17 @@ angular.module("cms", [])
             element.bind('click', function () {
 				var imageId = element[0].id.replace(/[^\d]/g,'');
 
-				//curl  -H "Accept:application/json"  -XDELETE    "http://cmsrs2admin.loc/api/images/delete/$1"
-                //httpDeleteFactory('http://cmsrs2admin.loc/api/images/upload', imageId, function (callback) {
-				//	window.location.reload();
-                //});
 				imgResource = $resource( "http://cmsrs2admin.loc/api/images/delete/" + ":id", { id: "@id" });
 				imgResource.remove({ id: imageId }, function(){
-					//cms.setItems(  $scope.pagesData  );
-					//$scope.pagesData = cms.removeItem( pageId  );
+					scope.$watch('page.images', function(newValue, oldImgs){
+						var index = oldImgs.indexOf( imageId );
+						if (index > -1) {
+							oldImgs.splice(index, 1);
+						}
 
-					window.location.reload();
+						scope.page.images =  oldImgs; 
+					});
+
 				});
 
 

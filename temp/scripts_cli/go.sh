@@ -142,3 +142,5 @@ ls -laR $imgDir
 
 
 
+echo -e "./user/login.sh"
+./user/login.sh

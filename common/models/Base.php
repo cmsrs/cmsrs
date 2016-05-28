@@ -9,6 +9,9 @@ use \yii\db\ActiveRecord;
 
 abstract class Base extends ActiveRecord{
 
+	const PARAM_SECTION_PUBLIC = 'public';
+	const PARAM_SECTION_PRIV = 'priv';
+
     /**
     * use in front and adin
     */
@@ -27,5 +30,14 @@ abstract class Base extends ActiveRecord{
         return $out;
     }
 
+	public static function GetConfigBySection(  $section = Base::PARAM_SECTION_PUBLIC  ){
+		$params = \Yii::$app->params;
+		
+        if( empty($params[ $section  ])  ){
+            throw new \Exception('0x34234443 param section is empty');
+        }
+
+		return $params[$section];
+	}
 
 }

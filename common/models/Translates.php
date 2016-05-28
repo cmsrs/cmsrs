@@ -17,7 +17,9 @@ class  Translates  extends ActiveRecord
 
 	
 	public static function GetLangs(){
-		$params = \Yii::$app->params;
+		//$params = \Yii::$app->params;
+
+		$params =  Base::GetConfigBySection( Base::PARAM_SECTION_PUBLIC  );
 		if( empty($params['langs'])  ){
 			throw new \Exception('0x342343 param lang is empty');
 		}
