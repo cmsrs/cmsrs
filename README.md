@@ -117,7 +117,7 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 
 6. Config cms:
 
-	for example login and password to administration panel
+	for example set up: login and password to administration panel
 
 	`common/config/params.php`
 
@@ -130,11 +130,11 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 
 	example:
 
-	https://github.com/cmsrs/cmsrs/blob/master/temp/admin_list_page.png
+	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/admin_list_page.png" alt="list pages" />
+
+	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/admin_page_edit.png" alt="edit page" />
 
 	https://github.com/cmsrs/cmsrs/blob/master/temp/cmsrs_admin.png
-
-	https://github.com/cmsrs/cmsrs/blob/master/temp/admin_page_edit.png
 
 
 
@@ -144,7 +144,7 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 
 	example:
 
-	https://github.com/cmsrs/cmsrs/blob/master/temp/front_start_page.png
+	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/front_start_page.png" alt="home page" />
 
-	https://github.com/cmsrs/cmsrs/blob/master/temp/front_page_example.png
+	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/front_page_example.png" alt="page example" />
 
