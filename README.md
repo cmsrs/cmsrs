@@ -14,10 +14,11 @@ It is include:
 * add content to the page
 * upload and delete image
 * set up langs
+* log in to administration panel
 
 Db scheme:
 
-https://github.com/cmsrs/cmsrs/blob/master/temp/schema_cmsrs.png
+<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/schema_cmsrs.png" alt="Db scheme" />
 
 
 The full version available on the website:
@@ -109,8 +110,19 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 		127.0.0.1 cmsrs2.loc
 		127.0.0.1 cmsrs2admin.loc
 
+5. Run server side tests:
 
-5. Backend:
+		cd temp/scripts_cli
+		./go.sh
+
+6. Config cms:
+
+	for example login and password to administration panel
+
+	`common/config/params.php`
+
+
+7. Backend:
 
 	`http://cmsrs2admin.loc/admin/#`
 
@@ -126,7 +138,7 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 
 
 
-6. Frontend:
+8. Frontend:
 
 	`http://cmsrs2.loc/`
 
@@ -135,15 +147,4 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 	https://github.com/cmsrs/cmsrs/blob/master/temp/front_start_page.png
 
 	https://github.com/cmsrs/cmsrs/blob/master/temp/front_page_example.png
-
-
-
-7. Run server side tests:
-
-		cd temp/scripts_cli
-		./go.sh
-
-8. Config cms:
-
-	`common/config/params.php`
 
