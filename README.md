@@ -130,7 +130,7 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 
 	example:
 
-	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/admin_list_page.png" alt="list pages" />
+	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/admin_list_page2.png" alt="list pages" />
 
 	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/admin_page_edit.png" alt="edit page" />
 
