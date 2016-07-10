@@ -9,11 +9,12 @@ angular.module("adminCmsrs")
 
 		menusGetResource = $resource( menuGet + ":id", { id: "@id" });
 		menusGetResource.get({ id: menuId }, function( menuOut  ){
-			$scope.menu =  menuOut; 
+			$scope.menu =  menuOut['out']; 
 			$scope.datalang = 'ala_ma_kota';
 
 			var positions = [];
-			for( var i=0; i < menuOut.menus_count; i++ ){
+			//console.log( 'menu_count',  menuOut['out'].menus_count  );
+			for( var i=0; i < menuOut['out'].menus_count; i++ ){
 				positions[i] = i+1;
 			}
 			$scope.positions =  positions;
@@ -23,7 +24,6 @@ angular.module("adminCmsrs")
 
         $http.get(  mainGetconfig )
             .success(function (data) {
-				//console.log( data.langs );
                 $scope.langs = data.langs;
             })
             .error(function (error) {
@@ -45,7 +45,8 @@ angular.module("adminCmsrs")
                     //$scope.data.orderError = error;
 					alert( 'err_create_menu' );
                 }).finally(function () {
-                    $location.path("/");
+					//alert('aaaaaaaaaa'  );
+                    $location.path("/menulist");
                 });
         }
 

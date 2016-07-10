@@ -7,6 +7,11 @@ use common\models\Menus;
 use common\models\Images;
 use common\models\Translates;
 
+use yii\filters\auth\CompositeAuth;
+use yii\filters\auth\HttpBearerAuth;
+use yii\filters\AccessControl;
+
+
 class MenusController extends BaseController{
 
 /*
@@ -18,12 +23,13 @@ class MenusController extends BaseController{
 
 	public function actionIndex(){
 		$data =   Menus::getDataList();  //$this->dataList();
-		return $data;
+		//$data['access_token'] = Yii::$app->user->identity->getAuthKey();
+		return  $this->respond(  $data );
 	}
 
 	public function actionGet( $id = null ){
 		$out =  Menus::getDataById( $id );
-		return $out;
+		return $this->respond(  $out );
 	}
 
 
@@ -33,12 +39,14 @@ class MenusController extends BaseController{
 	public function actionDeleteall(){ 
 		Images::DeleteAllImgFiles();
 
-		Menus::deleteAll();
+		$out =  Menus::deleteAll();
+
+		return $this->respond(  $out );
 	}
 
 	public function actionDelete( $id =null ){
 		$isDel = Menus::deleteMenuById( $id  );
-		return  $isDel;
+		return   $this->respond(  $isDel );
 	}
 
 	public function actionSave(){
@@ -60,12 +68,45 @@ class MenusController extends BaseController{
 
 		Translates::saveData( $dataTranslate, [ 'menus_id' => $menuId ],  $arrObjTranslates );
 
-		return $menuId;
+		return   $this->respond( $menuId );
 	}
 
 	public function behaviors()
 	{
 		$behaviors = parent::behaviors();
+
+        $behaviors['authenticator'] = [
+            'class' => CompositeAuth::className(),
+            'authMethods' => [
+                //HttpBasicAuth::className(),
+                HttpBearerAuth::className(),
+                //QueryParamAuth::className(),
+            ],
+        ];
+
+/*
+		$behaviors['access'] = [
+			'class' => AccessControl::className(),
+			//'only' => ['index'],
+			'rules' => [
+				[
+					'actions' => ['index'],
+					'allow' => true,
+					'roles' => ['@'],
+				],
+				[
+//					'actions' => ['get'],
+                    'allow' => true,
+					'roles' => ['?']
+                ],
+
+
+
+			],
+		];
+*/
+
+
 		$behaviors['verbs'] = [
 			'class' => \yii\filters\VerbFilter::className(),
 			'actions' => [

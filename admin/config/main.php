@@ -13,9 +13,11 @@ return [
 'components' => [
 
 	'request' => [
-	'parsers' => [
-	'application/json' => 'yii\web\JsonParser',
-	]
+		'class' => '\yii\web\Request',
+		'enableCookieValidation' => false,
+		'parsers' => [
+			'application/json' => 'yii\web\JsonParser',
+		]
 	],
 
 
@@ -51,9 +53,9 @@ return [
 
 	],
 	'user' => [
-	'identityClass' => '\common\models\User',
-	'enableSession' => false,
-	'loginUrl' => null
+		'identityClass' => '\common\models\User',
+		'enableSession' => false,
+		'loginUrl' => null
 	],
 	'log' => [
 		'traceLevel' => YII_DEBUG ? 3 : 0,

@@ -1,5 +1,5 @@
 
-curl  -H "Accept:application/json" -H "Content-Type:application/json"   -XPOST "http://cmsrs2admin.loc/api/users/login" -d '{"data":{ "username":"demo",  "password":"test123"}}'
+curl  -H "Accept:application/json" -H "Content-Type:application/json"   -XPOST "http://cmsrs2admin.loc/api/users/login" -d '{"data":{ "username":"demo",  "password":"demo"}}'
 
 
 

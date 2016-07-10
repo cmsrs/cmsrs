@@ -11,7 +11,7 @@ angular.module("adminCmsrs")
 
         $http.get(menusUrl)
             .success(function (data) {
-                $scope.menusData = data;
+                $scope.menusData = data['out'];
 	        })
             .error(function (error) {
                 $scope.data.error = error;

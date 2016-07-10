@@ -1,7 +1,10 @@
 #!/bin/bash
+#dodalem autoryzcje dlatego moze byc problem z wyciagni4eciewm idkow
 
 #cd menu
 ./menu/delete_all.sh  #comment to 
+#exit
+
 
 
 imgDir="../../common/images/"
@@ -12,6 +15,10 @@ ls -la $imgDir
 echo -e "./menu/create.sh"
 id_m=$(./menu/create.sh)
 
+#echo "potrzebuje out z tego jsona"
+id_m=$(nodejs -pe 'JSON.parse(process.argv[1]).out' $id_m )
+echo $id_m
+#exit
 
 echo -e "./menu/update.sh $id_m"
 ./menu/update.sh $id_m 
@@ -25,11 +32,13 @@ echo -e "./menu/index.sh"
 
 echo -e "./page/create.sh $id_m"
 id_p=$(./page/create.sh $id_m)
+#id_p=$(nodejs -pe 'JSON.parse(process.argv[1]).out' $id_p )
 #echo -e "--create_page_id=$id_m"
 
 
 echo -e "./page/create.sh $id_m"
 id_p2=$(./page/create.sh $id_m)
+#id_p2=$(nodejs -pe 'JSON.parse(process.argv[1]).out' $id_p2 )
 
 
 
@@ -49,6 +58,8 @@ echo  -e ""
 
 echo -e "./page/create.sh $id_m"
 id_p3=$(./page/create.sh $id_m)
+
+#id_p3=$(nodejs -pe 'JSON.parse(process.argv[1]).out' $id_p3 )
 
 
 echo -e "./image/upload.sh $id_p3"
@@ -123,6 +134,7 @@ echo  -e "new menu"
 
 echo -e "./menu/create.sh"
 id_m2=$(./menu/create.sh)
+id_m2=$(nodejs -pe 'JSON.parse(process.argv[1]).out' $id_m2 )
 
 echo -e "./page/create.sh $id_m2"
 id_p4=$(./page/create.sh $id_m2)

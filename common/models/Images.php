@@ -105,12 +105,15 @@ class Images extends  Base //ActiveRecord
 			throw new ErrorException('0x234345433 empty page_id in DeleteImagesPageByPageId');
 		}
 		$dirImg = Images::GetDirToImageByPageId( $pageId );
+		if( !is_dir($dirImg)  ){
+			return false; //no dir to remove
+		}
 		Images::DeleteDir($dirImg);
 	}
 
 public static function DeleteDir($dirPath) {
     if (! is_dir($dirPath)) {
-        throw new InvalidArgumentException("$dirPath must be a directory");
+        throw new \Exception("$dirPath must be a directory 0x3453543");
     }
     if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
         $dirPath .= '/';

@@ -14,6 +14,7 @@ angular.module("cms", [])
         },
 
 		setItems: function( items  ){
+			//console.log( 'items', items  );
 			cmsData =  angular.copy( items  );
 		},
 
@@ -23,6 +24,28 @@ angular.module("cms", [])
 
 	}
 
+})
+.factory('authInterceptor', function ($q, $window, $location) {
+
+	//alert(  $window.sessionStorage.access_token  );
+	return {
+		request: function (config) {
+			if ($window.sessionStorage.access_token) {
+				//HttpBearerAuth
+
+				config.headers.Authorization = 'Bearer ' + $window.sessionStorage.access_token;
+			}
+			return config;
+		},
+		responseError: function (rejection) {
+			if (rejection.status === 401) {
+
+				//console.log(  rejection );
+				$location.path('/login').replace();
+			}
+			return $q.reject(rejection);
+		}
+	};
 })
 .directive('uploadFile', function (httpUploadFactory) {
     return {

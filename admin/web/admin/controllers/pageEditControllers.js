@@ -24,6 +24,7 @@ angular.module("adminCmsrs")
 
         $http.get(menusUrl)
             .success(function (dataMenu) {
+				var dataMenu = dataMenu['out'];
 				var menuToSelect = [];
 				for( var i = 0; i < dataMenu.length; i++ ){
 					if(  "1" === dataMenu[i].published  ){

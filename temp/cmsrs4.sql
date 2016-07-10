@@ -1,139 +1,223 @@
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+-- phpMyAdmin SQL Dump
+-- version 4.4.14
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jul 10, 2016 at 07:53 PM
+-- Server version: 5.5.49-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.17
 
-DROP SCHEMA IF EXISTS `cmsrs` ;
-CREATE SCHEMA IF NOT EXISTS `cmsrs` DEFAULT CHARACTER SET utf8 ;
-USE `cmsrs` ;
-
--- -----------------------------------------------------
--- Table `cmsrs`.`menus`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cmsrs`.`menus` ;
-
-CREATE TABLE IF NOT EXISTS `cmsrs`.`menus` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `published` TINYINT(4) NOT NULL DEFAULT 1,
-  `position` INT(11) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-AUTO_INCREMENT = 7
-DEFAULT CHARACTER SET = utf8;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
--- -----------------------------------------------------
--- Table `cmsrs`.`pages`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cmsrs`.`pages` ;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-CREATE TABLE IF NOT EXISTS `cmsrs`.`pages` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `published` TINYINT(4) NOT NULL DEFAULT 1,
-  `is_left_menu` TINYINT(4) NOT NULL DEFAULT 1 COMMENT '1 is left menu',
-  `is_intro_text` INT(11) NOT NULL DEFAULT 0 COMMENT 'position intro text on the main page',
-  `is_deleted` TINYINT(4) NOT NULL DEFAULT 1 COMMENT 'main site is not deleted',
-  `menus_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `fk_pages_menus1`
-    FOREIGN KEY (`menus_id`)
-    REFERENCES `cmsrs`.`menus` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-AUTO_INCREMENT = 62
-DEFAULT CHARACTER SET = utf8;
+--
+-- Database: `cmsrs`
+--
 
-CREATE INDEX `fk_pages_menus1_idx` ON `cmsrs`.`pages` (`menus_id` ASC);
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `contents`
+--
 
--- -----------------------------------------------------
--- Table `cmsrs`.`contents`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cmsrs`.`contents` ;
+CREATE TABLE IF NOT EXISTS `contents` (
+  `id` int(11) NOT NULL,
+  `content` text NOT NULL COMMENT 'main contten on the page',
+  `lang` varchar(11) NOT NULL,
+  `pages_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `cmsrs`.`contents` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `content` TEXT NOT NULL COMMENT 'main contten on the page',
-  `lang` VARCHAR(11) NOT NULL,
-  `pages_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `fk_contents_pages1`
-    FOREIGN KEY (`pages_id`)
-    REFERENCES `cmsrs`.`pages` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-AUTO_INCREMENT = 138
-DEFAULT CHARACTER SET = utf8;
+-- --------------------------------------------------------
 
-CREATE INDEX `fk_contents_pages1_idx` ON `cmsrs`.`contents` (`pages_id` ASC);
+--
+-- Table structure for table `images`
+--
 
-CREATE UNIQUE INDEX `uniq_lang_page` USING BTREE ON `cmsrs`.`contents` (`lang` ASC, `pages_id` ASC);
+CREATE TABLE IF NOT EXISTS `images` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL COMMENT 'sanitaze file name (without special sign)',
+  `no` int(11) NOT NULL,
+  `pages_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `cmsrs`.`images`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cmsrs`.`images` ;
+--
+-- Table structure for table `menus`
+--
 
-CREATE TABLE IF NOT EXISTS `cmsrs`.`images` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(255) NOT NULL COMMENT 'sanitaze file name (without special sign)',
-  `no` INT(11) NOT NULL,
-  `pages_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `fk_images_pages`
-    FOREIGN KEY (`pages_id`)
-    REFERENCES `cmsrs`.`pages` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-AUTO_INCREMENT = 876
-DEFAULT CHARACTER SET = utf8;
+CREATE TABLE IF NOT EXISTS `menus` (
+  `id` int(11) NOT NULL,
+  `published` tinyint(4) NOT NULL DEFAULT '1',
+  `position` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE INDEX `fk_images_pages_idx` ON `cmsrs`.`images` (`pages_id` ASC);
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `pages`
+--
 
--- -----------------------------------------------------
--- Table `cmsrs`.`translates`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cmsrs`.`translates` ;
+CREATE TABLE IF NOT EXISTS `pages` (
+  `id` int(11) NOT NULL,
+  `published` tinyint(4) NOT NULL DEFAULT '1',
+  `is_left_menu` tinyint(4) NOT NULL DEFAULT '1' COMMENT '1 is left menu',
+  `is_intro_text` int(11) NOT NULL DEFAULT '0' COMMENT 'position intro text on the main page',
+  `is_deleted` tinyint(4) NOT NULL DEFAULT '1' COMMENT 'main site is not deleted',
+  `menus_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `cmsrs`.`translates` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `lang` VARCHAR(11) NOT NULL,
-  `type` ENUM('menu_short_title','page_short_title','page_title','page_intro_text','image_desc') NOT NULL COMMENT 'show description aministraition panel',
-  `pages_id` INT(11) NULL COMMENT 'null is allowed',
-  `menus_id` INT(11) NULL COMMENT 'null is allowed',
-  `images_id` INT(11) NULL COMMENT 'null is allowed',
-  `value` VARCHAR(512) NOT NULL COMMENT 'value of translate',
-  PRIMARY KEY (`id`),
-  CONSTRAINT `fk_translates_images1`
-    FOREIGN KEY (`images_id`)
-    REFERENCES `cmsrs`.`images` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  CONSTRAINT `fk_translates_menus1`
-    FOREIGN KEY (`menus_id`)
-    REFERENCES `cmsrs`.`menus` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  CONSTRAINT `fk_translates_pages1`
-    FOREIGN KEY (`pages_id`)
-    REFERENCES `cmsrs`.`pages` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB
-AUTO_INCREMENT = 1777
-DEFAULT CHARACTER SET = utf8;
+-- --------------------------------------------------------
 
-CREATE INDEX `fk_translates_images1_idx` ON `cmsrs`.`translates` (`images_id` ASC);
+--
+-- Table structure for table `translates`
+--
 
-CREATE INDEX `fk_translates_menus1_idx` ON `cmsrs`.`translates` (`menus_id` ASC);
+CREATE TABLE IF NOT EXISTS `translates` (
+  `id` int(11) NOT NULL,
+  `lang` varchar(11) NOT NULL,
+  `type` enum('menu_short_title','page_short_title','page_title','page_intro_text','image_desc') NOT NULL COMMENT 'show description aministraition panel',
+  `pages_id` int(11) DEFAULT NULL COMMENT 'null is allowed',
+  `menus_id` int(11) DEFAULT NULL COMMENT 'null is allowed',
+  `images_id` int(11) DEFAULT NULL COMMENT 'null is allowed',
+  `value` varchar(512) NOT NULL COMMENT 'value of translate'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE INDEX `fk_translates_pages1_idx` ON `cmsrs`.`translates` (`pages_id` ASC);
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `user`
+--
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `auth_key` varchar(32) NOT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `password_reset_token` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `status` smallint(6) NOT NULL DEFAULT '10',
+  `created_at` int(11) NOT NULL,
+  `updated_at` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `contents`
+--
+ALTER TABLE `contents`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `uniq_lang_page` (`lang`,`pages_id`) USING BTREE,
+  ADD KEY `fk_contents_pages1_idx` (`pages_id`);
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_images_pages_idx` (`pages_id`);
+
+--
+-- Indexes for table `menus`
+--
+ALTER TABLE `menus`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pages`
+--
+ALTER TABLE `pages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_pages_menus1_idx` (`menus_id`);
+
+--
+-- Indexes for table `translates`
+--
+ALTER TABLE `translates`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_translates_images1_idx` (`images_id`),
+  ADD KEY `fk_translates_menus1_idx` (`menus_id`),
+  ADD KEY `fk_translates_pages1_idx` (`pages_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `contents`
+--
+ALTER TABLE `contents`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `menus`
+--
+ALTER TABLE `menus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `pages`
+--
+ALTER TABLE `pages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `translates`
+--
+ALTER TABLE `translates`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `contents`
+--
+ALTER TABLE `contents`
+  ADD CONSTRAINT `fk_contents_pages1` FOREIGN KEY (`pages_id`) REFERENCES `pages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `images`
+--
+ALTER TABLE `images`
+  ADD CONSTRAINT `fk_images_pages` FOREIGN KEY (`pages_id`) REFERENCES `pages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pages`
+--
+ALTER TABLE `pages`
+  ADD CONSTRAINT `fk_pages_menus1` FOREIGN KEY (`menus_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `translates`
+--
+ALTER TABLE `translates`
+  ADD CONSTRAINT `fk_translates_images1` FOREIGN KEY (`images_id`) REFERENCES `images` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_translates_menus1` FOREIGN KEY (`menus_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_translates_pages1` FOREIGN KEY (`pages_id`) REFERENCES `pages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

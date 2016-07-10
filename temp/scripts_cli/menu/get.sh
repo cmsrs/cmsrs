@@ -7,5 +7,5 @@ fi
 
 
 
-curl  -H "Accept:application/json" "http://cmsrs2admin.loc/api/menus/get/$1"
-#curl -i -H "Accept:application/json" "http://cmsrs2admin.loc/api/menus/get/0"
+#curl  -H "Accept:application/json" "http://cmsrs2admin.loc/api/menus/get/$1"
+curl  -H "Authorization: Bearer u4qnlunMrSWqcyitTV06gH5C8ZlAaWar" "http://cmsrs2admin.loc/api/menus/get/$1"

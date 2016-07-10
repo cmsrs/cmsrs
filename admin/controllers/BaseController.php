@@ -21,4 +21,16 @@ class BaseController extends Controller{
 		return $arrPost;
 	}
 
+	public function  respond( $data ){
+		$out = [];
+		$out['out'] =  $data ;
+		//if(  !is_array( $data ) ){
+		//	$out['out'] =  $data ;
+		//}else{
+		//	$out = $data;
+		//}
+		$out['access_token'] = Yii::$app->user->identity->getAuthKey();
+		return $out;
+	}
+
 }
