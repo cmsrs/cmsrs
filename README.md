@@ -49,8 +49,11 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 	
 		mysql --default-character-set=utf8 -u cmsrs -ppass123456 cmsrs < ./temp/cmsrs4.sql 
 	
+	Insert admin user name demo/demo - to administration panel:
 	
-	
+	INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
+    (1, 'demo', 'u4qnlunMrSWqcyitTV06gH5C8ZlAaWar', '$2y$13$dN9ipH0Pc2zLBsDGfIkLOuZDvG0Lv5YACMWCAUIYeCHqNKfw3VbDa', NULL, 'demo@localhost.com', 10, 1428424049, 1428424049);
+
 3. Set vhosts:
 	
 	Frontend:
@@ -116,8 +119,6 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 		./go.sh
 
 6. Config cms:
-
-	for example set up: login and password to administration panel
 
 	`common/config/params.php`
 
