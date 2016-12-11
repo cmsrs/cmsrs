@@ -51,10 +51,10 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 	
 	Insert admin user name demo/demo - to administration panel:
 	
-<pre>
-	INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
-    (1, 'demo', 'u4qnlunMrSWqcyitTV06gH5C8ZlAaWar', '$2y$13$dN9ipH0Pc2zLBsDGfIkLOuZDvG0Lv5YACMWCAUIYeCHqNKfw3VbDa', NULL, 'demo@localhost.com', 10, 1428424049, 1428424049);
-</pre>
+
+		INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
+    		(1, 'demo', 'u4qnlunMrSWqcyitTV06gH5C8ZlAaWar', '$2y$13$dN9ipH0Pc2zLBsDGfIkLOuZDvG0Lv5YACMWCAUIYeCHqNKfw3VbDa', NULL, 'demo@localhost.com', 10, 1428424049, 1428424049);
+
 
 3. Set vhosts:
 	
@@ -136,9 +136,6 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/admin_list_page2.png" alt="list pages" />
 
 	<img src="https://github.com/cmsrs/cmsrs/blob/master/temp/admin_page_edit.png" alt="edit page" />
-
-	https://github.com/cmsrs/cmsrs/blob/master/temp/cmsrs_admin.png
-
 
 
 8. Frontend:
