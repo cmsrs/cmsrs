@@ -33,7 +33,7 @@ http://www.cmsrs.pl/en/cms/cmsrs/about-cmsrs
 
 		git clone https://github.com/yiisoft/yii2-app-advanced.git
 		cd yii2-app-advanced
-		composer global require "fxp/composer-asset-plugin:~1.1.1"
+		composer global require "fxp/composer-asset-plugin:^1.2.0"		
 		composer create-project --prefer-dist yiisoft/yii2-app-advanced cmsrs
 		
 		cd cmsrs
